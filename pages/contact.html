@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giant</title>
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/quieres.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v1.2.0/maptiler-sdk.umd.min.js"></script>
+    <link
+      href="https://cdn.maptiler.com/maptiler-sdk-js/v1.2.0/maptiler-sdk.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.maptiler.com/maptiler-geocoding-control/v1.1.0/maptilersdk.umd.js"></script>
+    <link
+      href="https://cdn.maptiler.com/maptiler-geocoding-control/v1.1.0/style.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+  </head>
+  <body>
+    <!---------------------------------------------------------------->
+    <!-- ------------------------ START HEADER--------------------- -->
+    <!---------------------------------------------------------------->
+    <div class="loader-box">
+      <span class="loader"></span>
+    </div>
+    <nav class="scroll" data-animation-class="fade-right">
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#"><img src="../assits/logo.png" alt="" /></a>
+        </div>
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="close-btn" />
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"> X </label>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./service.html">Services</a></li>
+
+          <li><a href="./our-portfolio.html">Portofolio</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./news.html">News</a></li>
+          <li><a href="./careers.html">Careers</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <div class="main-nav-social">
+            <span></span>
+            <a href="#">
+              <img src="../assits/facebook.svg" class="cursor-pointer" alt="" />
+            </a>
+            <a href="#">
+              <img
+                src="../assits/instagram.svg"
+                class="cursor-pointer"
+                alt=""
+              />
+            </a>
+            <a href="#">
+              <img src="../assits/twitterr.svg" class="cursor-pointer" alt="" />
+            </a>
+          </div>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        </label>
+      </div>
+    </nav>
+    <section class="about-section">
+      <div class="row">
+        <div class="text-center">
+          <h1 id="element">
+            We are
+            <span class="text-purple"> Gaint Whale </span>
+            <br />
+            We are
+            <span class="text-purple">your Degital Partner </span>
+          </h1>
+        </div>
+      </div>
+
+      <div class="box-flex">
+        <div class="box-flex-text">
+          <h5 class="heading-secondery">Contact Us</h5>
+
+          <p>
+            Our marketing agency is seeking talented individuals like you to
+            join our dynamic team!
+          </p>
+          <div>
+            <div class="contact-details">
+              <div class="contact-phone-box">
+                <p class="text-purple">phone</p>
+                <div class="contact-phone">
+                  <div class="footer-icon">
+                    <img src="../assits/telphone.svg" alt="" />
+                  </div>
+                  <div class="contact-numbers">
+                    <p>+966598662779</p>
+                    <p>+966507094777</p>
+                  </div>
+                </div>
+              </div>
+              <div class="contact-email-box">
+                <p class="text-purple">Email</p>
+                <div class="contact-email">
+                  <div>
+                    <img src="../assits/mail.svg" alt="" />
+                  </div>
+                  <p>info @gaint-whales.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box-flex-image">
+          <img src="../assits/contact-img.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="contact-section contact-wrapper" id="contact">
+      <div class="row">
+        <div class="section-title text-center">
+          <h1>Get in Touch</h1>
+        </div>
+      </div>
+      <form class="contact-form">
+        <div class="form-input-wrapper">
+          <div class="form-inputs">
+            <input
+              type="text"
+              placeholder="Name"
+              class="input scroll"
+              data-animation-class="fade-right"
+            />
+            <span class="input-error show-error-msg">enter a valid input</span>
+          </div>
+          <div class="form-inputs">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="input scroll"
+              data-animation-class="fade-left"
+            />
+            <span class="input-error">enter a valid input</span>
+          </div>
+        </div>
+        <div class="form-input-wrapper">
+          <div class="form-inputs">
+            <input
+              type="text"
+              placeholder="Name"
+              class="input scroll"
+              data-animation-class="fade-right"
+            />
+            <span class="input-error">enter a valid input</span>
+          </div>
+          <div class="form-inputs">
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              class="input scroll"
+              data-animation-class="fade-left"
+            />
+            <span class="input-error">enter a valid input</span>
+          </div>
+        </div>
+        <div class="form-input-wrapper">
+          <div class="form-inputs">
+            <textarea
+              type="text"
+              placeholder="Message"
+              class="input scroll"
+              data-animation-class="fade-top"
+              name="message"
+            ></textarea>
+            <span></span>
+          </div>
+
+          <div class="form-inputs form-inputs-botton-box">
+            <button type="submit" class="family-part-btn">Send</button>
+          </div>
+        </div>
+      </form>
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </section>
+    <section>
+      <footer class="scroll" data-animation-class="fade-left">
+        <!-- col 1 -->
+
+        <div class="footer-col">
+          <div>
+            <img class="footer-img" src="../assits/logo.png" alt="" />
+          </div>
+          <p class="footer-summary">
+            GIANT WHALE is a full-fledged digital marketing agency based in KSA.
+            We deliver creative, digital, and strategicsolutions that help
+            ourclientsachieve their businessobjectives.
+          </p>
+        </div>
+
+        <!-- col 2 -->
+        <div class="footer-col">
+          <div class="footer-title">Services</div>
+          <ul>
+            <li>Brand Strategy</li>
+            <li>Branding</li>
+            <li>Media Production</li>
+            <li>Web Development</li>
+            <li>Socia Media Management</li>
+            <li>Media Buying</li>
+            <li>Creative Design & Printing</li>
+          </ul>
+        </div>
+        <!-- col 3 -->
+        <div class="footer-col">
+          <div class="footer-title">Contact</div>
+
+          <div class="footer-mail">
+            <img class="footer-icon" src="../assits/mail.svg" alt="" />
+            <div class="footer-mail-text">info @gaint-whales.com</div>
+          </div>
+
+          <div class="footer-telephone">
+            <div>
+              <img class="footer-icon" src="../assits/telphone.svg" alt="" />
+            </div>
+            <div class="footer-telphone-numbers">
+              <p>+966598662779</p>
+              <p>+966507094777</p>
+            </div>
+          </div>
+        </div>
+        <!-- col 4 -->
+        <div class="footer-col">
+          <!-- put span or before here -->
+          <div class="footer-title footer-follow-us">Follow us</div>
+
+          <div class="follow-us-icons">
+            <img class="footer-icon" src="../assits/be.svg" alt="" />
+            <img class="footer-icon" src="../assits/facebook.svg" alt="" />
+            <img class="footer-icon" src="../assits/instagram.svg" alt="" />
+            <img class="footer-icon" src="../assits/youtube.svg" alt="" />
+          </div>
+          <div class="follow-us-icons">
+            <img class="footer-icon" src="../assits/twitterr.svg" alt="" />
+            <img class="footer-icon" src="../assits/tiktok.svg" alt="" />
+            <img class="footer-icon" src="../assits/linkedin.svg" alt="" />
+            <img class="footer-icon" src="../assits/snapchat.svg" alt="" />
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="../js/script.js"></script>
+    <script src="../js/observer.js"></script>
+    <script src="../js/tabs.js"></script>
+    <script src="../js/tabs.js"></script>
+    <script src="../js/gallary.js"></script>
+    <script src="../js/map.js"></script>
+    <script src="../js/loading.js"></script>
+  </body>
+</html>

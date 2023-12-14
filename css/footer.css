@@ -1,0 +1,88 @@
+footer {
+  background-color: #1d1b1b;
+  padding: 4rem 2rem;
+  font-size: 1.6rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+
+  gap: 2rem;
+}
+footer p {
+  line-height: 2.42rem;
+}
+.footer-img {
+  width: 23rem;
+  margin-top: 0;
+}
+.footer-title {
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-size: 2.4rem;
+}
+
+footer ul li {
+  margin-bottom: 1rem;
+}
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-telephone {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.footer-mail,
+.footer-telephone div {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.footer-mail {
+  width: 280px;
+}
+.footer-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+.footer-telphone-numbers {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.follow-us-icons {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+.footer-mail-text {
+  font-size: 1.4rem;
+}
+.section-service {
+  margin-top: 10rem;
+}
+
+@media (max-width: 850px) {
+  footer {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+}
+@media (max-width: 700px) {
+  footer {
+    grid-template-columns: 2fr 1fr;
+  }
+  .heading-secondery {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 530px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+  footer .footer-col {
+    max-width: 300px;
+  }
+}

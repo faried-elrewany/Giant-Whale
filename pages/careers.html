@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giant</title>
+    <link rel="stylesheet" href="../css/general.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/quieres.css" />
+    <link rel="stylesheet" href="../css/animation.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="../js/script.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="loader-box">
+      <span class="loader"></span>
+    </div>
+    <!---------------------------------------------------------------->
+    <!-- ------------------------ START HEADER--------------------- -->
+    <!---------------------------------------------------------------->
+    <nav class="scroll" data-animation-class="fade-right">
+      <div class="wrapper">
+        <div class="logo">
+          <a href="#"><img src="../assits/logo.png" alt="" /></a>
+        </div>
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="close-btn" />
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"> X </label>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./service.html">Services</a></li>
+
+          <li><a href="./our-portfolio.html">Portofolio</a></li>
+          <li><a href="./about.html">About Us</a></li>
+          <li><a href="./news.html">News</a></li>
+          <li><a href="./careers.html">Careers</a></li>
+          <li><a href="./contact.html">Contact Us</a></li>
+          <div class="main-nav-social">
+            <span></span>
+            <a href="#">
+              <img src="../assits/facebook.svg" class="cursor-pointer" alt="" />
+            </a>
+            <a href="#">
+              <img
+                src="../assits/instagram.svg"
+                class="cursor-pointer"
+                alt=""
+              />
+            </a>
+            <a href="#">
+              <img src="../assits/twitterr.svg" class="cursor-pointer" alt="" />
+            </a>
+          </div>
+        </ul>
+        <label for="menu-btn" class="btn menu-btn">
+          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        </label>
+      </div>
+    </nav>
+
+    <section class="careers-section">
+      <div class="section-title text-center">
+        <h1>Join Our Team Today</h1>
+      </div>
+
+      <div class="box-flex scroll" data-animation-class="fade-left">
+        <div class="box-flex-text">
+          <span
+            class="tab-span scroll"
+            data-animation-class="fade-right"
+          ></span>
+          <h5>Careers</h5>
+          <p>
+            Our marketing agency is seeking talented individuals like you to
+            join our dynamic team!
+          </p>
+          <p>
+            At Giant Whale, we are known for our innovative strategies, creative
+            thinking, and exceptional results. We believe in fostering a
+            collaborative and supportive work environment where every team
+            member has the opportunity to shine and grow.
+          </p>
+        </div>
+        <div class="box-flex-image">
+          <img src="../assits/team.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section class="part-family">
+      <div class="part-family-text-box">
+        <span class="tab-span scroll" data-animation-class="fade-right"></span>
+        <h5>It’s our Pleasure to be part of our family</h5>
+      </div>
+      <form id="family-form">
+        <div class="input-box scroll" data-animation-class="fade-right">
+          <input type="text" class="input" placeholder="Full Name" />
+          <span class="input-error show-error-msg">enter a valid input</span>
+        </div>
+        <div class="input-box scroll" data-animation-class="fade-right">
+          <input type="text" class="input" placeholder="Full Name" />
+          <span class="input-error">enter a valid input</span>
+        </div>
+        <div class="input-box scroll" data-animation-class="fade-right">
+          <input type="tel" class="input" placeholder="Full Name" />
+          <span class="input-error">enter a valid input</span>
+        </div>
+        <div class="input-box scroll" data-animation-class="fade-right">
+          <input type="tel" class="input" placeholder="Full Name" />
+          <span class="input-error">enter a valid input</span>
+        </div>
+        <div class="input-box scroll" data-animation-class="fade-right">
+          <textarea
+            class="input"
+            id="family-part-text-aria"
+            cols="30"
+            rows="10"
+            placeholder="cover letter"
+          ></textarea>
+          <span class="input-error">enter a valid input</span>
+        </div>
+        <div class="upload-container scroll" data-animation-class="fade-right">
+          <label for="upload-file" class="upload-label">
+            <div class="upload-label-inner">
+              <svg
+                class="upload-icon"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 16"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"
+                />
+              </svg>
+              <p class="upload-text mb-2">
+                <span class="upload-text-bold">Click to upload</span> or drag
+                and drop
+              </p>
+            </div>
+            <!-- <span class="input-error show-error-msg">enter a valid input</span> -->
+            <input id="upload-file" type="file" class="upload-input" />
+          </label>
+        </div>
+        <div class="family-button-box">
+          <button
+            type="submit"
+            class="family-part-btn scroll"
+            data-animation-class="fade-top"
+          >
+            send
+          </button>
+        </div>
+      </form>
+    </section>
+    <section>
+      <footer class="scroll" data-animation-class="fade-left">
+        <!-- col 1 -->
+
+        <div class="footer-col">
+          <div>
+            <img class="footer-img" src="../assits/logo.png" alt="" />
+          </div>
+          <p class="footer-summary">
+            GIANT WHALE is a full-fledged digital marketing agency based in KSA.
+            We deliver creative, digital, and strategicsolutions that help
+            ourclientsachieve their businessobjectives.
+          </p>
+        </div>
+
+        <!-- col 2 -->
+        <div class="footer-col">
+          <div class="footer-title">Services</div>
+          <ul>
+            <li>Brand Strategy</li>
+            <li>Branding</li>
+            <li>Media Production</li>
+            <li>Web Development</li>
+            <li>Socia Media Management</li>
+            <li>Media Buying</li>
+            <li>Creative Design & Printing</li>
+          </ul>
+        </div>
+        <!-- col 3 -->
+        <div class="footer-col">
+          <div class="footer-title">Contact</div>
+
+          <div class="footer-mail">
+            <img class="footer-icon" src="../assits/mail.svg" alt="" />
+            <div class="footer-mail-text">info @gaint-whales.com</div>
+          </div>
+
+          <div class="footer-telephone">
+            <div>
+              <img class="footer-icon" src="../assits/telphone.svg" alt="" />
+            </div>
+            <div class="footer-telphone-numbers">
+              <p>+966598662779</p>
+              <p>+966507094777</p>
+            </div>
+          </div>
+        </div>
+        <!-- col 4 -->
+        <div class="footer-col">
+          <!-- put span or before here -->
+          <div class="footer-title footer-follow-us">Follow us</div>
+
+          <div class="follow-us-icons">
+            <img class="footer-icon" src="../assits/be.svg" alt="" />
+            <img class="footer-icon" src="../assits/facebook.svg" alt="" />
+            <img class="footer-icon" src="../assits/instagram.svg" alt="" />
+            <img class="footer-icon" src="../assits/youtube.svg" alt="" />
+          </div>
+          <div class="follow-us-icons">
+            <img class="footer-icon" src="../assits/twitterr.svg" alt="" />
+            <img class="footer-icon" src="../assits/tiktok.svg" alt="" />
+            <img class="footer-icon" src="../assits/linkedin.svg" alt="" />
+            <img class="footer-icon" src="../assits/snapchat.svg" alt="" />
+          </div>
+        </div>
+      </footer>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="../js/observer.js"></script>
+    <script src="../js/loading.js"></script>
+  </body>
+</html>

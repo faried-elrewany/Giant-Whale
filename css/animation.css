@@ -1,0 +1,104 @@
+/* nav ul li {
+  position: relative;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+nav ul li a::before {
+  content: " ";
+  display: block;
+  position: absolute;
+
+  inset: 0 0 0 0;
+  background: hsl(200 100% 80%);
+  z-index: -10;
+  transition: transform 0.3s ease;
+}
+nav ul li a::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+} */
+
+/* Apply animations to specific elements */
+
+.fade-left {
+  animation: fade-left 2s ease-in-out both;
+}
+
+.fade-right {
+  animation: fade-right 2s ease-in-out both;
+}
+
+.fade-top {
+  animation: fade-top 2s ease-in-out both;
+}
+
+@keyframes tabApear {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  from {
+    transform: translateX(360px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  from {
+    transform: translateX(-360px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-top {
+  from {
+    transform: translateY(360px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-bottom {
+  from {
+    transform: translateY(-360px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.fade-out {
+  animation: fadeOut 2s ease-in-out;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+#element {
+}
