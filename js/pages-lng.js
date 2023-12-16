@@ -110,7 +110,7 @@ function setLanguageStyles() {
     const head = document.head || document.getElementsByTagName("head")[0];
     head.insertAdjacentHTML(
       "beforeend",
-      '<link rel="stylesheet" href="./css/style-rtl.css" id="languageStylesheetRTL">'
+      '<link rel="stylesheet" href="../css/style-rtl.css" id="languageStylesheetRTL">'
     );
     htmlElement.setAttribute("dir", "rtl");
   } else {
@@ -118,7 +118,7 @@ function setLanguageStyles() {
     const head = document.head || document.getElementsByTagName("head")[0];
     head.insertAdjacentHTML(
       "beforeend",
-      '<link rel="stylesheet" href="./css/style-ltr.css" id="languageStylesheetLTR">'
+      '<link rel="stylesheet" href="../css/style-ltr.css" id="languageStylesheetLTR">'
     );
     htmlElement.setAttribute("dir", "ltr");
   }

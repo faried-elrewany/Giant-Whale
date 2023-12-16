@@ -4,27 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giant</title>
-    <link rel="stylesheet" href="../css/general.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/quieres.css" />
-    <link rel="stylesheet" href="../css/animation.css" />
-    <link rel="stylesheet" href="../css/nav.css" />
-    <link rel="stylesheet" href="../css/footer.css" />
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule=""
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
-    ></script>
-
-    <script defer src="../js/script.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <div class="loader-box">
@@ -34,27 +13,12 @@
     <!-- ------------------------ START HEADER--------------------- -->
     <!---------------------------------------------------------------->
     <nav class="scroll" data-animation-class="fade-right">
-      <div class="wrapper">
+      <div class="nav-wrapper">
         <div class="logo">
-          <a href="#"><img src="../assits/logo.png" alt="" /></a>
+          <a href="#"><img src="../assits/giant-logo.svg" alt="" /></a>
         </div>
-        <input type="radio" name="slider" id="menu-btn" />
-        <input type="radio" name="slider" id="close-btn" />
-        <ul class="nav-links">
-          <label for="close-btn" class="btn close-btn"> X </label>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="./service.html">Services</a></li>
-
-          <li><a href="./our-portfolio.html">Portofolio</a></li>
-          <li><a href="./about.html">About Us</a></li>
-          <li><a href="./news.html">News</a></li>
-          <li><a href="./careers.html">Careers</a></li>
-          <li><a href="./contact.html">Contact Us</a></li>
-          <div class="main-nav-social">
-            <span></span>
-            <a href="#">
-              <img src="../assits/facebook.svg" class="cursor-pointer" alt="" />
-            </a>
+        <ul class="nav-links ">
+          <div class="mobile-nav-social">
             <a href="#">
               <img
                 src="../assits/instagram.svg"
@@ -63,20 +27,84 @@
               />
             </a>
             <a href="#">
-              <img src="../assits/twitterr.svg" class="cursor-pointer" alt="" />
+              <img src="../assits/linked-in.svg" class="cursor-pointer" alt="" />
             </a>
+            <a href="#">
+              <img src="../assits/tiktok.svg" class="cursor-pointer" alt="" />
+            </a>
+          </div>
+          <div class="mobile-nav-logo">
+            <img src="../assits/giant-logo.svg" alt="" />
+          </div>
+          <label for="close-btn" class="btn close-btn"> X </label>
+          <li><a class="nav-link" href="../index.html">Home</a></li>
+          <li><a class="nav-link" href="../pages/service.html">Services</a></li>
+
+          <li>
+            <a class="nav-link" href="../pages/our-portfolio.html">Portofolio</a>
+          </li>
+          <li><a class="nav-link" href="../pages/about.html">About Us</a></li>
+          <li><a class="nav-link" href="../pages/news.html">News</a></li>
+          <li><a class="nav-link" href="../pages/careers.html">Careers</a></li>
+          <li>
+            <a class="nav-link" href="../pages/contact.html">Contact Us</a>
+          </li>
+          <div class="language-box">
+            <span class="break"></span>
+            <div class="drop-down">
+              <div class="drop-down-wraper">
+                <div class="selected">ENG</div>
+                  <img src="../assits/en-lng.svg" class="selected-img"></img>
+              </div>
+              <div class="list">
+                  <div class="list-item">
+                      <img src="../assits/en-lng.svg" alt="">
+                      <div class="text">ENG</div>
+                  </div>
+                  <div class="list-item">
+                      <img src="../assits/ar-lng.svg" alt="">
+                      <div class="text">AR</div>
+                  </div>
+              </div>
+          </div>
+      
+       
+          </div>
+          <div class="main-nav-social">
+            <span class="break"></span>
+            <div class="social-wrapper">
+              <a href="#">
+                <img
+                  class=""
+                  src="../assits/instagram.svg"
+                  class="cursor-pointer"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="../assits/linked-in.svg"
+                  class="cursor-pointer"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img src="../assits/tiktok.svg" class="cursor-pointer" alt="" />
+              </a>
+            </div>
           </div>
         </ul>
         <label for="menu-btn" class="btn menu-btn">
-          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <img  class="menu-button" src="../assits/Mobile-nav-icon.svg" alt="" />
         </label>
       </div>
     </nav>
 
+
     <section class="portfolio" id="Portfolio">
-      <div class="container">
+      <div class="portfolio-container">
         <div class="row">
-          <div class="section-title text-center">
+          <div class="section-title purple-before text-center">
             <h1>our Portfolio</h1>
           </div>
         </div>
@@ -220,6 +248,8 @@
         </div>
       </div>
     </section>
+
+    <!--  START portfolio about section same styles as about section -->
     <section class="about-section">
       <div class="box-flex">
         <div class="box-flex-text">
@@ -227,7 +257,7 @@
             class="tab-span scroll"
             data-animation-class="fade-right"
           ></span>
-          <div>
+          <div class="portfolio-about-text">
             <p>
               ًWe are dedicated to transforming ideas into impactful
               experiences. Here, you'll find a collection of our creative
@@ -242,78 +272,91 @@
         </div>
       </div>
     </section>
-    <section>
+    <!--  END portfolio about section same styles as about section -->
+
+    <!-- START FOOTER SECTION -->
+    <section class="section-footer">
       <footer class="scroll" data-animation-class="fade-left">
         <!-- col 1 -->
-
-        <div class="footer-col">
-          <div>
-            <img class="footer-img" src="../assits/logo.png" alt="" />
-          </div>
-          <p class="footer-summary">
-            GIANT WHALE is a full-fledged digital marketing agency based in KSA.
-            We deliver creative, digital, and strategicsolutions that help
-            ourclientsachieve their businessobjectives.
-          </p>
-        </div>
-
-        <!-- col 2 -->
-        <div class="footer-col">
-          <div class="footer-title">Services</div>
-          <ul>
-            <li>Brand Strategy</li>
-            <li>Branding</li>
-            <li>Media Production</li>
-            <li>Web Development</li>
-            <li>Socia Media Management</li>
-            <li>Media Buying</li>
-            <li>Creative Design & Printing</li>
-          </ul>
-        </div>
-        <!-- col 3 -->
-        <div class="footer-col">
-          <div class="footer-title">Contact</div>
-
-          <div class="footer-mail">
-            <img class="footer-icon" src="../assits/mail.svg" alt="" />
-            <div class="footer-mail-text">info @gaint-whales.com</div>
-          </div>
-
-          <div class="footer-telephone">
+        <div class="footer-grid">
+          <div class="footer-col">
             <div>
-              <img class="footer-icon" src="../assits/telphone.svg" alt="" />
+              <img class="footer-img" src="../assits/giant-logo.svg" alt="" />
             </div>
-            <div class="footer-telphone-numbers">
-              <p>+966598662779</p>
-              <p>+966507094777</p>
-            </div>
+            <p class="footer-summary">
+              GIANT WHALE is a full-fledged digital marketing<br />
+              agency based in KSA. We deliver creative, digital,<br />
+              and strategic solutions that help our clients<br />
+              achieve their business objectives.
+            </p>
           </div>
-        </div>
-        <!-- col 4 -->
-        <div class="footer-col">
-          <!-- put span or before here -->
-          <div class="footer-title footer-follow-us">Follow us</div>
 
-          <div class="follow-us-icons">
-            <img class="footer-icon" src="../assits/be.svg" alt="" />
-            <img class="footer-icon" src="../assits/facebook.svg" alt="" />
-            <img class="footer-icon" src="../assits/instagram.svg" alt="" />
-            <img class="footer-icon" src="../assits/youtube.svg" alt="" />
+          <!-- col 3 -->
+          <div class="footer-col">
+            <div class="footer-title">
+              <p>Contact</p>
+            </div>
+
+            <div class="footer-mail">
+              <img class="footer-icon" src="../assits/mail.svg" alt="" />
+              <div class="footer-mail-text">info @gaint-whales.com</div>
+            </div>
+
+            <div class="footer-telephone">
+              <div>
+                <img class="footer-icon" src="../assits/telphone.svg" alt="" />
+              </div>
+              <div class="footer-telphone-numbers">
+                <p>+966598662779</p>
+                <p>+966507094777</p>
+              </div>
+            </div>
           </div>
-          <div class="follow-us-icons">
-            <img class="footer-icon" src="../assits/twitterr.svg" alt="" />
-            <img class="footer-icon" src="../assits/tiktok.svg" alt="" />
-            <img class="footer-icon" src="../assits/linkedin.svg" alt="" />
-            <img class="footer-icon" src="../assits/snapchat.svg" alt="" />
+          <!-- col 4 -->
+          <div class="footer-col">
+            <!-- put span or before here -->
+            <div class="footer-title footer-follow-us"><p>Follow US</p></div>
+
+            <div class="follow-us-icons">
+              <a href="#">
+                <img class="footer-icon" src="../assits/be.svg" alt="" />
+              </a>
+              <a href="#">
+                <img class="footer-icon" src="../assits/facebook.svg" alt="" />
+              </a>
+              <a href="">
+                <img class="footer-icon" src="../assits/instagram.svg" alt="" />
+              </a>
+              <a href="">
+                <img class="footer-icon" src="../assits/youtube.svg" alt="" />
+              </a>
+              <a href="">
+                <img class="footer-icon" src="../assits/twitterr.svg" alt="" />
+              </a>
+              <a href="#">
+                <img class="footer-icon" src="../assits/tiktok.svg" alt="" />
+              </a>
+              <a href="#">
+                <img class="footer-icon" src="../assits/linkedin.svg" alt="" />
+              </a>
+              <a href="#">
+                <img class="footer-icon" src="../assits/snapchat.svg" alt="" />
+              </a>
+            </div>
           </div>
         </div>
+        <p class="text-center copy-right">
+          Copyright © 2023 giant whale. All Rights Reserved.
+        </p>
       </footer>
     </section>
+    <!-- START FOOTER SECTION -->
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script src="../js/observer.js"></script>
-    <script src="../js/tabs.js"></script>
     <script src="../js/gallary.js"></script>
     <script src="../js/loading.js"></script>
+    <script src="../js/lng-pages.js"></script>
   </body>
 </html>

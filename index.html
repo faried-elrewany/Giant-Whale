@@ -3,83 +3,177 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Giant</title>
-    <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/animation.css" />
-    <link rel="stylesheet" href="css/quieres.css" />
-    <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule=""
-      src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
-    ></script>
-
-    <script defer src="js/script.js"></script>
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./css/style-ltr.css" id="ltrStylesheet"> -->
+    <!-- <link rel="stylesheet" href="./css/style-rtl.css" id="rtlStylesheet"> -->
+<!-- swiper js slider library -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
-  <body>
+  <body >
     <div class="loader-box">
       <span class="loader"></span>
     </div>
-    <!---------------------------------------------------------------->
-    <!-- ------------------------ START HEADER--------------------- -->
-    <!---------------------------------------------------------------->
+    
     <nav class="scroll" data-animation-class="fade-right">
-      <div class="wrapper">
+      <div class="nav-wrapper">
         <div class="logo">
-          <a href="#"><img src="./assits/logo.png" alt="" /></a>
+          <a href="#"><img src="./assits/giant-logo.svg" alt="" /></a>
         </div>
-        <input type="radio" name="slider" id="menu-btn" />
-        <input type="radio" name="slider" id="close-btn" />
-        <ul class="nav-links">
-          <label for="close-btn" class="btn close-btn"> X </label>
-          <li><a href="#">Home</a></li>
-          <li><a href="./pages/service.html">Services</a></li>
-
-          <li><a href="./pages/our-portfolio.html">Portofolio</a></li>
-          <li><a href="./pages/about.html">About Us</a></li>
-          <li><a href="./pages/news.html">News</a></li>
-          <li><a href="./pages/careers.html">Careers</a></li>
-          <li><a href="./pages/contact.html">Contact Us</a></li>
-          <div class="main-nav-social">
-            <span></span>
-            <a href="#">
-              <img src="../assits/facebook.svg" class="cursor-pointer" alt="" />
-            </a>
+        <ul class="nav-links ">
+          <div class="mobile-nav-social">
             <a href="#">
               <img
-                src="../assits/instagram.svg"
+                src="./assits/instagram.svg"
                 class="cursor-pointer"
                 alt=""
               />
             </a>
             <a href="#">
-              <img src="../assits/twitterr.svg" class="cursor-pointer" alt="" />
+              <img src="./assits/linked-in.svg" class="cursor-pointer" alt="" />
             </a>
+            <a href="#">
+              <img src="./assits/tiktok.svg" class="cursor-pointer" alt="" />
+            </a>
+          </div>
+          <div class="mobile-nav-logo">
+            <img src="./assits/giant-logo.svg" alt="" />
+          </div>
+          <label for="close-btn" class="btn close-btn"> X </label>
+          <li><a class="nav-link" href="#">Home</a></li>
+          <li><a class="nav-link" href="./pages/service.html">Services</a></li>
+
+          <li>
+            <a class="nav-link" href="./pages/our-portfolio.html">Portofolio</a>
+          </li>
+          <li><a class="nav-link" href="./pages/about.html">About Us</a></li>
+          <li><a class="nav-link" href="./pages/news.html">News</a></li>
+          <li><a class="nav-link" href="./pages/careers.html">Careers</a></li>
+          <li>
+            <a class="nav-link" href="./pages/contact.html">Contact Us</a>
+          </li>
+          <div class="language-box">
+            <span class="break"></span>
+            <div class="drop-down">
+              <div class="drop-down-wraper">
+                <div class="selected">ENG</div>
+                  <img src="./assits/en-lng.svg" class="selected-img"></img>
+              </div>
+              <div class="list">
+                  <div class="list-item">
+                      <img src="./assits/en-lng.svg" alt="">
+                      <div class="text">ENG</div>
+                  </div>
+                  <div class="list-item">
+                      <img src="./assits/ar-lng.svg" alt="">
+                      <div class="text">AR</div>
+                  </div>
+              </div>
+          </div>
+      
+       
+          </div>
+          <div class="main-nav-social">
+            <span class="break"></span>
+            <div class="social-wrapper">
+              <a href="#">
+                <img
+                  class=""
+                  src="./assits/instagram.svg"
+                  class="cursor-pointer"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img
+                  src="./assits/linked-in.svg"
+                  class="cursor-pointer"
+                  alt=""
+                />
+              </a>
+              <a href="#">
+                <img src="./assits/tiktok.svg" class="cursor-pointer" alt="" />
+              </a>
+            </div>
           </div>
         </ul>
         <label for="menu-btn" class="btn menu-btn">
-          <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+          <img  class="menu-button" src="./assits/Mobile-nav-icon.svg" alt="" />
         </label>
       </div>
     </nav>
+    <!-- START  HOME BACKGROUND IMAGE AND BOX OF LANGUAGE AND WHATSAPP -->
     <div class="bg home scroll" data-animation-class="fade-top">
-      <!-- <div>بسم الله الرحمن الرحيم</div> -->
-    </div>
-    <section class="section-we-whale scroll" data-animation-class="fade-top">
-      <div class="we-whale-header">
-        <p class="heading-secondary">We Are Gaint Whale</p>
+      <div class="mobile-box">
+        <div class="mobile-box-language">
+          <img src="./assits/ar-lng.svg" alt="" />
+        </div>
+        <div class="mobile-box-whatsapp">
+          <a href="#">
+            <img src="./assits/whatsapp.svg" alt="" />
+          </a>
+        </div>
       </div>
+    </div>
+    
+    <!-- END  HOME BACKGROUND IMAGE AND BOX OF LANGUAGE AND WHATSAPP -->
+
+
+
+    <!-- START WE ARE GIANT WHALE SECTION -->
+    <section class="section-we-whale scroll" data-animation-class="fade-top">
       <div class="we-whale-container">
         <div class="gallery scroll" data-animation-class="fade-left">
+          <div class="gallery-item">
+            <img
+              src="./assits/whale-1.png"
+              alt="Photo of beautifully
+          arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assits/whale-1.png"
+              alt="Photo of beautifully
+          arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assits/whale-1.png"
+              alt="Photo of beautifully
+          arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assits/whale-1.png"
+              alt="Photo of beautifully
+          arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assits/whale-1.png"
+              alt="Photo of beautifully
+          arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </div>
+          <div class="gallery-item">
+            <img
+              src="./assits/whale-1.png"
+              alt="Photo of beautifully
+          arranged food"
+            />
+            <!-- <figcaption>Caption</figcaption> -->
+          </div>
           <div class="gallery-item">
             <img
               src="./assits/whale-1.png"
@@ -111,13 +205,22 @@
           </div>
         </div>
         <div class="we-whale-box">
-          <div class="testimonials">
+          <div class="section-header">
+            We Are Giant Whale
+            <br/>
+            <span class="text-purple">
+              Your Digital Partner
+            </span>
+          </div>
+          <div class="we-whlae-services">
             <div class="we-whale">
               <div class="we-whale-heading">Branding</div>
               <span class="we-whale-line"></span>
               <p class="we-whale-text">
-                Inexpensive, healthy and great-tasting meals, without even
-                having to order manually! It feels truly magical.
+                Harness the power of our professional<br/>
+                branding to put yourself ahead of the<br/>
+                game and take control of your<br/>
+                company's success today.
               </p>
             </div>
 
@@ -125,35 +228,46 @@
               <div class="we-whale-heading">Media Production</div>
               <span class="we-whale-line"></span>
               <p class="we-whale-text">
-                Your brand’s story needs to be told in a way that captivates
-                your audience.+ We can help you bring it to life through
-                engaging content and professional media production services.
+                 Your brand’s story needs to be told in<br/>
+                a way that captivates your audience.<br/>
+                We can help you bring it to life through<br/>
+                engaging content and professional<br/>
+                media production services.
+               
               </p>
             </div>
             <div class="we-whale">
               <div class="we-whale-heading">Web Development</div>
               <span class="we-whale-line"></span>
               <p class="we-whale-text">
-                We create high-performing websites, E-commerce and mobile apps
-                that are designed to embrace your brand’s identity and showcase
-                your products and services
+                We create high-performing websites, <br/>
+                E-commerce and mobile apps that <br/>
+                are designed to embrace your<br/>
+                brand’s identity and showcase <br/>
+                your products and services.
               </p>
             </div>
             <div class="we-whale">
               <div class="we-whale-heading">Social media management</div>
               <span class="we-whale-line"></span>
               <p class="we-whale-text">
-                Maximize your brand’s visibility, customer engagement, and
-                business growth with our creative social media marketing tactics
+                Maximize your brand’s visibility customer
+                engagement, and business growth with
+                our creative social media marketing 
+                tactics.
               </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section-hero scroll" data-animation-class="fade-right">
-      <div class="hero">
-        <div class="hero-text-box scroll" data-animation-class="fade-top">
+    <!-- END WE ARE GIANT WHALE SECTION -->
+    <section class="section-home-about scroll" data-animation-class="fade-right">
+      <div class="section-title text-center">
+        <h1>About  <span class="text-purple">Us</span> </h1>
+      </div>
+      <div class="home-about">
+        <div class="home-about-text-box scroll" data-animation-class="fade-top">
           <div class="tabs__buttons--container">
             <button class="tabs__tab-btn" data-tab-id="ABOUT-GAINT-WHALE">
               ABOUT GAINT WHALE
@@ -163,256 +277,383 @@
           </div>
           <div data-tab="ABOUT-GAINT-WHALE" class="tabs__tab">
             <p class="">
-              GIANT WHALE is a full-fledged digital marketing agency based in
-              KSA. We deliver creative, digital, and strategic solutions that
-              help our clients achieve their business objectives.
+              GIANT WHALE is a full-fledged digital marketing agency based in KSA. 
+              We deliver creative, digital, and strategic solutions that help our
+              clients achieve their business objectives.
+            </p>
+            <p class="">
+              Everything your business requires, from media buying and creative
+              digital marketing strategies to brand planning, unique branding, 
+              web development, and media production. 
             </p>
           </div>
 
           <div data-tab="MISSION" class="tabs__tab">
             <p class="">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-              provident! Commodi provident libero tempora eos, sunt quae
-              obcaecati at aspernatur.
+              As we consistently push the limits of technology-driven marketing, 
+              our vision is to revolutionize business performance and assist them 
+              in maximizing their return on investment ROI.
             </p>
           </div>
 
           <div data-tab="VISION" class="tabs__tab">
             <p class="">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere
-              expedita ab sed corporis alias ipsum officia qui recusandae minus
-              quibusdam ipsa, explicabo fuga impedit libero, laborum soluta
-              exercitationem, provident rerum?
+              Empowering businesses with cutting-edge digital marketing
+              solutions that help them achieve their business goals.
             </p>
           </div>
         </div>
-        <div class="hero-img-box">
+        <div class="home-about-img-box">
           <img
             src="./assits/about.png"
-            class="hero-img"
+            class="home-about-img"
             alt="Woman enjoying food, meals in storage container, and food bowls on a table"
           />
         </div>
       </div>
     </section>
-    <section class="slider-2">
-      <div class="we-whale-header">
-        <p class="heading">
-          Our
-          <span class="text-purple"> Clients </span>
-        </p>
-      </div>
-      <div class="container scroll" data-animation-class="fade-right">
-        <div class="swiper card-slider card-slider2">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/image_1png.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/image_2.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/image_3.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/image_4.png" alt="" />
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/image_1png.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="swiper-pagination slider2"></div>
-        </div>
-      </div>
-    </section>
-    <section class="slider-1">
-      <div class="we-whale-header">
-        <p class="heading">
-          Our
-          <span class="text-purple"> Latest </span>
-          Work
-        </p>
-      </div>
-      <div class="container scroll" data-animation-class="fade-left">
-        <div class="swiper card-slider">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/slider2.png" alt="" />
-              </div>
-              <p>Hero</p>
-              <p>web development</p>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/slider2.png" alt="" />
-              </div>
-              <p>Hero</p>
-              <p>web development</p>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/slider2.png" alt="" />
-              </div>
-              <p>Hero</p>
-              <p>web development</p>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/slider2.png" alt="" />
-              </div>
-              <p>Hero</p>
-              <p>web development</p>
-            </div>
-            <div class="swiper-slide">
-              <div class="swiper-slide-img-box">
-                <img src="./assits/slider2.png" alt="" />
-              </div>
-              <p>Hero</p>
-              <p>web development</p>
-            </div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-      </div>
-    </section>
-    <section class="section-service">
-      <div class="we-whale-header">
-        <p class="heading-secondary">We Are Gaint Whale</p>
-      </div>
-      <div class="service-box scroll" data-animation-class="fade-top">
-        <div class="service service-1">
-          <img src="./assits/Branding Strategy Service.png" alt="" />
-          <div class="service-summary-box">
-            <img src="./assits/brand-strategy.png" alt="" />
-            <p class="">Branding strategy</p>
-          </div>
-        </div>
-        <div class="service service-1">
-          <img src="./assits/Branding Service.png" alt="" />
-          <div class="service-summary-box">
-            <img src="./assits/Branding.png" alt="" />
-            <p class="">Branding</p>
-          </div>
-        </div>
-        <div class="service service-1">
-          <img src="./assits/Media Production service.png" alt="" />
-          <div class="service-summary-box">
-            <img src="./assits/media-production.png" alt="" />
-            <p class="">Media Broduction</p>
-          </div>
-        </div>
-        <div class="service service-1">
-          <img src="./assits/web-development.png" alt="" />
-          <div class="service-summary-box">
-            <img src="./assits/web.png" alt="" />
-            <p class="">Web Development</p>
-          </div>
-        </div>
-        <div class="service service-1">
-          <img src="./assits/social-media-management-10-nxC.png" alt="" />
-          <div class="service-summary-box">
-            <img src="./assits/social.png" alt="" />
-            <p class="">Social Media Management</p>
-          </div>
-        </div>
+    <!-- END WE ARE GIANT WHALE SECTION -->
 
-        <div class="service service-1">
-          <img src="./assits/media-buying-3-A76.png" alt="" />
-          <div class="service-summary-box">
-            <img src="./assits/media-buy.png" alt="" />
-            <p class="">Media Buying</p>
+      <!--  START service section desktop only -->
+      <section class="section-home-service">
+              <div class=" section-title text-center ">
+                <h1 >
+                  <span class="text-purple"> Our </span>
+                  Services
+                </h1>
+              </div>
+              <div class="service-box scroll" data-animation-class="fade-top">
+                <div class="service ">
+                  <img src="./assits/Branding Strategy Service.png" alt="" />
+                  <div class="service-summary-box">
+                    <img src="./assits/brand-strategy.png" alt="" />
+                    <p class="">Branding strategy</p>
+                  </div>
+                </div>
+                <div class="service ">
+                  <img src="./assits/Branding Service.png" alt="" />
+                  <div class="service-summary-box">
+                    <img src="./assits/Branding.png" alt="" />
+                    <p class="">Branding</p>
+                  </div>
+                </div>
+                <div class="service ">
+                  <img src="./assits/Media Production service.png" alt="" />
+                  <div class="service-summary-box">
+                    <img src="./assits/media-production.png" alt="" />
+                    <p class="">Media Broduction</p>
+                  </div>
+                </div>
+                <div class="service ">
+                  <img src="./assits/web-development.png" alt="" />
+                  <div class="service-summary-box">
+                    <img src="./assits/web.png" alt="" />
+                    <p class="">Web Development</p>
+                  </div>
+                </div>
+                <div class="service ">
+                  <img src="./assits/social-media-management-10-nxC.png" alt="" />
+                  <div class="service-summary-box">
+                    <img src="./assits/social.png" alt="" />
+                    <p class="">Social Media Management</p>
+                  </div>
+                </div>
+        
+                <div class="service ">
+                  <img src="./assits/media-buying-3-A76.png" alt="" />
+                  <div class="service-summary-box">
+                    <img src="./assits/media-buy.png" alt="" />
+                    <p class="">Media Buying</p>
+                  </div>
+                </div>
+                <div class="service ">
+                  <img src="./assits/creative-desigi-printings-1.png" alt="" />
+                  <div class="service-summary-box">
+                    <img src="./assits/creative-design.png" alt="" />
+                    <p class="">Creative Design</p>
+                  </div>
+                </div>
+              </div>
+      </section>
+      <!--  END service section desktop only -->  
+    
+    
+        <!--START our service slider section mobile only  -->
+        <section class="section-our-services">
+          <div class=" section-title text-center ">
+            <h1 >
+              Our
+              <span class="text-purple"> Services </span>
+            </h1>
           </div>
-        </div>
-        <div class="service service-1">
-          <img src="./assits/creative-desigi-printings-1.png" alt="" />
-          <div class="service-summary-box">
-            <img src="./assits/creative-design.png" alt="" />
-            <p class="">Creative Design</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <footer class="scroll" data-animation-class="fade-left">
-        <!-- col 1 -->
-
-        <div class="footer-col">
-          <div>
-            <img class="footer-img" src="./assits/logo.png" alt="" />
-          </div>
-          <p class="footer-summary">
-            GIANT WHALE is a full-fledged digital marketing agency based in KSA.
-            We deliver creative, digital, and strategicsolutions that help
-            ourclientsachieve their businessobjectives.
-          </p>
-        </div>
-
-        <!-- col 2 -->
-        <div class="footer-col">
-          <div class="footer-title">Services</div>
-          <ul>
-            <li>Brand Strategy</li>
-            <li>Branding</li>
-            <li>Media Production</li>
-            <li>Web Development</li>
-            <li>Socia Media Management</li>
-            <li>Media Buying</li>
-            <li>Creative Design & Printing</li>
-          </ul>
-        </div>
-        <!-- col 3 -->
-        <div class="footer-col">
-          <div class="footer-title">Contact</div>
-
-          <div class="footer-mail">
-            <img class="footer-icon" src="./assits/mail.svg" alt="" />
-            <div class="footer-mail-text">info @gaint-whales.com</div>
-          </div>
-
-          <div class="footer-telephone">
-            <div>
-              <img class="footer-icon" src="./assits/telphone.svg" alt="" />
+          <div class=" scroll" data-animation-class="fade-right">
+            <div class="swiper card-slider4 card-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="service ">
+                    <img src="./assits/Branding Strategy Service.png" alt="" />
+                    <div class="service-summary-box">
+                      <img src="./assits/brand-strategy.png" alt="" />
+                      <p class="">Branding strategy</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="service ">
+                    <img src="./assits/Branding Service.png" alt="" />
+                    <div class="service-summary-box">
+                      <img src="./assits/Branding.png" alt="" />
+                      <p class="">Branding</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="service ">
+                    <img src="./assits/Media Production service.png" alt="" />
+                    <div class="service-summary-box">
+                      <img src="./assits/media-production.png" alt="" />
+                      <p class="">Media Broduction</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="service ">
+                    <img src="./assits/web-development.png" alt="" />
+                    <div class="service-summary-box">
+                      <img src="./assits/web.png" alt="" />
+                      <p class="">Web Development</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="service ">
+                    <img src="./assits/social-media-management-10-nxC.png" alt="" />
+                    <div class="service-summary-box">
+                      <img src="./assits/social.png" alt="" />
+                      <p class="">Social Media Management</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="service ">
+                    <img src="./assits/media-buying-3-A76.png" alt="" />
+                    <div class="service-summary-box">
+                      <img src="./assits/media-buy.png" alt="" />
+                      <p class="">Media Buying</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="service ">
+                    <img src="./assits/creative-desigi-printings-1.png" alt="" />
+                    <div class="service-summary-box">
+                      <img src="./assits/creative-design.png" alt="" />
+                      <p class="">Creative Design</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination slider2"></div>
             </div>
-            <div class="footer-telphone-numbers">
-              <p>+966598662779</p>
-              <p>+966507094777</p>
+          </div>
+        </section>
+        <!--End our service slider section mobile only  -->
+
+        <!--START our clients slider section mobile only  -->
+
+        <section class="section-our-clients">
+          <div class=" section-title text-center ">
+            <h1 >
+              Our
+              <span class="text-purple"> Clients </span>
+            </h1>
+          </div>
+          <div class="our-clients-slider scroll" data-animation-class="fade-right">
+            <div dir="rtl" class="swiper card-slider3 card-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/image_1png.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/image_2.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/image_3.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/image_4.png" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/image_1png.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination slider2"></div>
             </div>
           </div>
-        </div>
-        <!-- col 4 -->
-        <div class="footer-col">
-          <!-- put span or before here -->
-          <div class="footer-title footer-follow-us">Follow us</div>
+        </section>
 
-          <div class="follow-us-icons">
-            <img class="footer-icon" src="./assits/be.svg" alt="" />
-            <img class="footer-icon" src="./assits/facebook.svg" alt="" />
-            <img class="footer-icon" src="./assits/instagram.svg" alt="" />
-            <img class="footer-icon" src="./assits/youtube.svg" alt="" />
-          </div>
-          <div class="follow-us-icons">
-            <img class="footer-icon" src="./assits/twitterr.svg" alt="" />
-            <img class="footer-icon" src="./assits/tiktok.svg" alt="" />
-            <img class="footer-icon" src="./assits/linkedin.svg" alt="" />
-            <img class="footer-icon" src="./assits/snapchat.svg" alt="" />
-          </div>
-        </div>
-      </footer>
-    </section>
+        <!--START our service slider section mobile only  -->
 
+
+        <!-- START web development slider section -->
+        <section class="section-web-development">
+          <div class="section-title text-center">
+            <h1 >
+              Our
+              <span class="text-purple"> Latest </span>
+              Work
+            </h1>
+          </div>
+          <div class="web-development-slider scroll" data-animation-class="fade-left">
+            <div class="swiper  card-slider1 card-slider ">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide web-development-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/slider2.png" alt="" />
+                  </div>
+                  <p>hero</p>
+                  <p>web development</p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/slider2.png" alt="" />
+                  </div>
+                  <p>Hero</p>
+                  <p>web development</p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/slider2.png" alt="" />
+                  </div>
+                  <p>Hero</p>
+                  <p>web development</p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/slider2.png" alt="" />
+                  </div>
+                  <p>Hero</p>
+                  <p>web development</p>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide-img-box">
+                    <img src="./assits/slider2.png" alt="" />
+                  </div>
+                  <p>Hero</p>
+                  <p>web development</p>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </section>
+        <!-- END web development slider section -->
+
+
+
+        <!--  START FOOTER section desktop only -->  
+
+        <section class="section-footer">
+          <footer class="scroll" data-animation-class="fade-left">
+            <!-- col 1 -->
+    <div class="footer-grid">
+    
+      <div class="footer-col">
+        <div>
+          <img class="footer-img" src="./assits/giant-logo.svg" alt="" />
+        </div>
+        <p class="footer-summary">
+          GIANT WHALE is a full-fledged digital marketing<br/>
+                agency based in KSA. We deliver creative, digital,<br/>
+                and strategic solutions that help our clients<br/>
+                achieve their business objectives.
+              </p>
+            </div>
+            
+            <!-- col 3 -->
+            <div class="footer-col">
+              <div class="footer-title">
+                <p>Contact</p>
+              </div>
+              
+              <div class="footer-mail">
+                <img class="footer-icon" src="./assits/mail.svg" alt="" />
+                <div class="footer-mail-text">info @gaint-whales.com</div>
+              </div>
+              
+              <div class="footer-telephone">
+                <div>
+                  <img class="footer-icon" src="./assits/telphone.svg" alt="" />
+                </div>
+                <div class="footer-telphone-numbers">
+                  <p>+966598662779</p>
+                  <p>+966507094777</p>
+                </div>
+              </div>
+            </div>
+            <!-- col 4 -->
+            <div class="footer-col">
+              <!-- put span or before here -->
+              <div class="footer-title footer-follow-us"><p>
+                Follow US
+              </p></div>
+              
+              <div class="follow-us-icons">
+                <a href="#">
+                  
+                  <img class="footer-icon" src="./assits/be.svg" alt="" />
+                </a>
+                <a href="#">
+                  
+                  <img class="footer-icon" src="./assits/facebook.svg" alt="" />
+                </a>
+                <a href="">
+                  
+                  <img class="footer-icon" src="./assits/instagram.svg" alt="" />
+                </a>
+                <a href="">
+                  <img class="footer-icon" src="./assits/youtube.svg" alt="" />        
+                </a>
+                <a href="">
+                  <img class="footer-icon" src="./assits/twitterr.svg" alt="" />
+                </a>
+                <a href="#">
+                  
+                  <img class="footer-icon" src="./assits/tiktok.svg" alt="" />
+                </a>
+                <a href="#">
+                  
+                  <img class="footer-icon" src="./assits/linkedin.svg" alt="" />
+                </a>
+                <a href="#">
+                  
+                  <img class="footer-icon" src="./assits/snapchat.svg" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
+            <p class="text-center copy-right">Copyright © 2023 giant whale. All Rights Reserved.</p>
+          </footer>
+        </section>
+        <!--  END FOOTER section desktop only -->  
+
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/observer.js"></script>
-    <script src="./js/slider.js"></script>
+<!-- about home for vision and tabs in home page  -->
+    <script src="./js/about-home.js"></script>  
+     <script src="./js/selectLanguage.js"></script>
+     <script src="./js/slider.js"></script> 
   </body>
 </html>
+
+ 
