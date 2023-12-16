@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .language-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        position: relative;
+        width: 100px;
+      }
+
+      .language-bottom-container {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        background-color: white;
+      }
+      .language-bottom-container img {
+        width: 20px;
+        height: 20px;
+        /* في الاغلب دي مش هنرجعها في اليمين للشمال */
+        /* margin-left: -10px; */
+      }
+
+      #languageDropdown {
+        padding: 8px;
+      }
+      /* Hide the default arrow in the select element */
+      #languageDropdown {
+        display: block;
+        appearance: none;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        /* padding-right: 25px; Adjust the padding based on the width of your custom arrow image */
+        border: none;
+        outline: none;
+        margin: 0 15px;
+        width: 100%;
+        color: white;
+        background-color: transparent;
+      }
+
+      /* Style the dropdown options if needed */
+
+      #languageBox,
+      #languageBottomBox {
+        width: 50px;
+        height: 50px;
+        background-size: cover;
+        cursor: pointer;
+        /* margin-left: 10px; */
+      }
+      #languageBox {
+        position: absolute;
+        right: 10%;
+        width: 28px;
+        height: 20px;
+      }
+
+      #languageDropdown option {
+        padding: 8px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: blueviolet;
+      }
+      #languageDropdown option:checked {
+        background-color: blueviolet;
+        color: white;
+      }
+
+      #languageDropdown option:hover {
+        background-color: lightgray !important; /* Change this to your desired hover color */
+      }
+    </style>
+    <title>Language Selector</title>
+  </head>
+
+  <body>
+    <div class="language-container">
+      <select id="languageDropdown" onchange="changeLanguage()">
+        <option value="english">ENG</option>
+        <option value="arabic">AR</option>
+      </select>
+      <div id="languageBox"></div>
+    </div>
+
+    <div class="language-bottom-container">
+      <!-- Use an img tag for the languageBottomBox -->
+      <img
+        id="languageBottomBox"
+        onclick="toggleLanguage()"
+        alt="Language Bottom Box"
+      />
+    </div>
+
+    <script>
+      const languageDropdown = document.getElementById("languageDropdown");
+      const languageBox = document.getElementById("languageBox");
+      const languageBottomBox = document.getElementById("languageBottomBox");
+
+      function changeLanguage() {
+        const selectedLanguage = languageDropdown.value;
+        updateDisplay(selectedLanguage);
+      }
+
+      function toggleLanguage() {
+        const currentLanguage = languageDropdown.value;
+        const newLanguage =
+          currentLanguage === "english" ? "arabic" : "english";
+        languageDropdown.value = newLanguage;
+        updateDisplay(newLanguage);
+      }
+
+      function updateDisplay(language) {
+        // Update the language box image
+        languageBox.style.backgroundImage = `url(${getLanguageImageURL(
+          language
+        )})`;
+
+        // Update the bottom language box image
+        languageBottomBox.src = getLanguageImageURL(
+          language === "english" ? "arabic" : "english"
+        );
+
+        // Update the direction of the page
+        // document.documentElement.dir = language === "english" ? "ltr" : "rtl";
+      }
+
+      function getLanguageImageURL(language) {
+        // Replace these paths with the actual paths to your language images
+        return language === "english"
+          ? "./assits/en-lng.svg"
+          : "./assits/ar-lng.svg";
+      }
+
+      // Initialize the display with the default language (e.g., English)
+      changeLanguage();
+    </script>
+  </body>
+</html>

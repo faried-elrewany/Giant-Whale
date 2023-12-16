@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Selector</title>
+    <link rel="stylesheet" href="lang.css" />
+  </head>
+  <body>
+    <!-- Language Selector Box -->
+    <div class="box-select-language">
+      <!-- Selected Language Display -->
+      <div class="drop-down-key">
+        <img
+          src="./assits/en-lng.svg"
+          class="selected-img"
+          alt="English Flag"
+        />
+        <p id="selectedLanguage" class="selected-text">ENG</p>
+      </div>
+
+      <!-- Language Options Dropdown -->
+      <div class="drop-down-language" data-role="language-switcher">
+        <ul class="dropDown-list">
+          <!-- English Option -->
+          <li class="dropDown-list-item">
+            <img
+              class="list-item-img"
+              src="./assits/en-lng.svg"
+              alt="English Flag"
+            />
+            <div class="list-item-txt">ENG</div>
+          </li>
+
+          <!-- Arabic Option -->
+          <li>
+            <img
+              class="list-item-img"
+              src="./assits/ar-lng.svg"
+              alt="Arabic Flag"
+            />
+            <div class="list-item-txt">AR</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const selectedText = document.querySelector(".selected-txt");
+      const dropDown = document.querySelector(".drop-down-key");
+      const selectedImg = document.querySelector(".selected-img");
+      const dropDownList = document.querySelector(".dropDown-list");
+      const dropDownListItem = document.querySelector(".dropDown-list-item");
+      dropDown.addEventListener("click", (e) => {
+        dropDownList.classList.toggle("active");
+        console.log(e.target);
+      });
+      dropDownList.addEventListener("click", (e) => {
+        const txt = e.closest.classList("list-item-img");
+        console.log(txt);
+      });
+    </script>
+  </body>
+</html>

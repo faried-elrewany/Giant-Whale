@@ -554,9 +554,6 @@
 }
 .portfolio .portfolio-gallery .item .inner {
   position: relative;
-  /* background-color: #bdbdbd; */
-  /* justify-content: center; */
-  /* display: flex; */
 }
 .portfolio .portfolio-gallery .item img {
   width: 100%;
