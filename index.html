@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- <link rel="stylesheet" href="./css/style-ltr.css" id="ltrStylesheet"> -->
-    <!-- <link rel="stylesheet" href="./css/style-rtl.css" id="rtlStylesheet"> -->
-<!-- swiper js slider library -->
+    <link rel="stylesheet" href="./css/style-ltr.css" id="ltrStylesheet">
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
   </head>
   <body >
-    <div class="loader-box">
-      <span class="loader"></span>
-    </div>
     
+    <div id="loading-container">
+      <div class="loading-spinner">
+        <img src="./assits/6.png" width="100px" alt="" />
+      </div>
+    </div>
+
     <nav class="scroll" data-animation-class="fade-right">
       <div class="nav-wrapper">
         <div class="logo">
@@ -387,7 +389,7 @@
             </h1>
           </div>
           <div class=" scroll" data-animation-class="fade-right">
-            <div class="swiper card-slider4 card-slider">
+            <div  dir="auto" class="swiper card-slider4 card-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="service ">
@@ -469,7 +471,7 @@
             </h1>
           </div>
           <div class="our-clients-slider scroll" data-animation-class="fade-right">
-            <div dir="rtl" class="swiper card-slider3 card-slider">
+            <div dir="auto"  class="swiper card-slider3 card-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <div class="swiper-slide-img-box">
@@ -514,7 +516,7 @@
               Work
             </h1>
           </div>
-          <div class="web-development-slider scroll" data-animation-class="fade-left">
+          <div dir="auto" class="web-development-slider scroll" data-animation-class="fade-left">
             <div class="swiper  card-slider1 card-slider ">
               <div class="swiper-wrapper">
                 <div class="swiper-slide web-development-slide">
@@ -653,6 +655,7 @@
     <script src="./js/about-home.js"></script>  
      <script src="./js/selectLanguage.js"></script>
      <script src="./js/slider.js"></script> 
+     <script src="./js/loading.js"></script> 
   </body>
 </html>
 

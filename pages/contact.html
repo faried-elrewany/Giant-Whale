@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giant</title>
+    <link rel="stylesheet" href="../css/style-ltr.css" id="ltrStylesheet">
 
+    <!-- Contact map -->
     <script src="https://cdn.maptiler.com/maptiler-sdk-js/v1.2.0/maptiler-sdk.umd.min.js"></script>
     <link
       href="https://cdn.maptiler.com/maptiler-sdk-js/v1.2.0/maptiler-sdk.css"
@@ -15,19 +17,22 @@
       href="https://cdn.maptiler.com/maptiler-geocoding-control/v1.1.0/style.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <!-- typing animation -->
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
   </head>
   <body>
     <!---------------------------------------------------------------->
     <!-- ------------------------ START HEADER--------------------- -->
     <!---------------------------------------------------------------->
-    <div class="loader-box">
-      <span class="loader"></span>
+    <!-- start loader -->
+    <div id="loading-container">
+      <div class="loading-spinner">
+        <img src="../assits/6.png" width="100px" alt="" />
+      </div>
     </div>
+    <!-- end loader -->
+
+  <!-- ------- start navbar ---------- -->
     <nav class="scroll" data-animation-class="fade-right">
       <div class="nav-wrapper">
         <div class="logo">
@@ -115,6 +120,12 @@
         </label>
       </div>
     </nav>
+  <!-- ------- start navbar ---------- -->
+
+
+
+
+  <!-- ----- start contact section same styles as about------ -->
     <section class="about-section">
       <div class="row">
         <div class="text-center">
@@ -167,6 +178,10 @@
         </div>
       </div>
     </section>
+  <!-- ----- end contact about section------ -->
+
+
+  <!-- ------- start contact section---------- -->
     <section class="contact-section contact-wrapper" id="contact">
       <div class="row">
         <div class="section-title purple-before text-center">
@@ -234,7 +249,9 @@
         <div id="map"></div>
       </div>
     </section>
-  
+  <!-- ------- start contact section---------- -->
+
+
     <!--  START SECTION FOOTER -->
     <section class="section-footer">
       <footer class="scroll" data-animation-class="fade-left">
@@ -313,6 +330,8 @@
     </section>
     <!--  END SECTION FOOTER -->
 
+
+    <!--  js files -->
     <script src="../js/observer.js"></script>
     <script src="../js/map.js"></script>
     <script src="../js/loading.js"></script>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Giant</title>
-
+<link rel="stylesheet" href="../css/style-ltr.css">
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"
@@ -20,12 +20,18 @@
     />
   </head>
   <body>
-    <!-- <div class="loader-box">
-      <span class="loader"></span>
-    </div> -->
-    <!---------------------------------------------------------------->
-    <!-- ------------------------ START HEADER--------------------- -->
-    <!---------------------------------------------------------------->
+  
+   
+
+    <!-- start loader -->
+   <div id="loading-container">
+    <div class="loading-spinner">
+      <img src="../assits/6.png" width="100px" alt="" />
+    </div>
+  </div>
+  <!-- end loader -->
+
+
     <nav class="scroll" data-animation-class="fade-right">
       <div class="nav-wrapper">
         <div class="logo">
@@ -115,7 +121,6 @@
     </nav>
 
      
-    
     <section class="section-service">
       <div class="section-title text-center purple-before">
         <h1 class="">Our Services</p>
@@ -393,8 +398,8 @@
     </section>
     <!--  END SRVICE PAGE TABS  -->
 
-    <!--  START FOOTER section desktop only -->
 
+    <!--  START FOOTER section desktop only -->
     <section class="section-footer">
       <footer class="scroll" data-animation-class="fade-left">
         <!-- col 1 -->
@@ -470,11 +475,12 @@
         </p>
       </footer>
     </section>
-    
     <!--  END FOOTER section desktop only -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- -->
     <script src="../js/lng-pages.js" ></script>
     <script src="../js/tabs.js" ></script>
+    <script src="../js/loading.js" ></script>
+
   </body>
 </html>

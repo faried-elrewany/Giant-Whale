@@ -4,7 +4,6 @@ var swiper = new Swiper(".card-slider1", {
     el: ".swiper-pagination",
     clickable: true,
   },
-
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -24,6 +23,7 @@ var swiper = new Swiper(".card-slider1", {
     },
   },
 });
+
 var swiper = new Swiper(".card-slider3", {
   spaceBetween: 30,
   pagination: {
@@ -60,15 +60,11 @@ var swiper = new Swiper(".card-slider4", {
     el: ".swiper-pagination",
     clickable: true,
   },
-
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
+
   breakpoints: {
     320: {
       slidesPerView: 2,
