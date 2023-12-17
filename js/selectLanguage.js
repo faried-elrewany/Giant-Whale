@@ -4,23 +4,42 @@ const selectedText = document.querySelector(".selected");
 const selectedImg = document.querySelector(".selected-img");
 const mobileImgBox = document.querySelector(".mobile-box-language img");
 
-// Load from local storage or use default values
-let currentText = localStorage.getItem("selectedText") || "ENG";
-let currentSrc = localStorage.getItem("selectedSrc") || "./assits/en-lng.svg";
+// Function to get language from the URL path
+function getLanguageFromUrl() {
+  const pathSegments = window.location.pathname.split("/");
+  const languageSegment = pathSegments[1]; // Assuming language code is at position 1
+
+  if (
+    languageSegment &&
+    (languageSegment.toLowerCase() === "en" ||
+      languageSegment.toLowerCase() === "ar")
+  ) {
+    return languageSegment.toLowerCase(); // Return lowercase language code
+  } else {
+    // Default language if not specified in the URL
+    return "en";
+  }
+}
+
+// Set initial values based on URL or use default values
+let currentText = getLanguageFromUrl();
+let currentSrc =
+  currentText === "ar" ? "./assits/ar-lng.svg" : "./assits/en-lng.svg";
 
 // Set initial values
-selectedText.innerHTML = currentText;
+selectedText.innerHTML = currentText.toUpperCase();
 selectedImg.src = currentSrc;
 mobileImgBox.src = getOtherLanguageSrc(currentSrc);
 
-// Function to change language based on the stored language in local storage
-function changeLanguageFromStorage() {
-  // Load language from local storage
-  currentText = localStorage.getItem("selectedText") || "ENG";
-  currentSrc = localStorage.getItem("selectedSrc") || "./assits/en-lng.svg";
+// Function to change language based on the language in the URL
+function changeLanguage() {
+  // Get language from the URL
+  currentText = getLanguageFromUrl();
+  currentSrc =
+    currentText === "ar" ? "./assits/ar-lng.svg" : "./assits/en-lng.svg";
 
   // Set the values
-  selectedText.innerHTML = currentText;
+  selectedText.innerHTML = currentText.toUpperCase();
   selectedImg.src = currentSrc;
   mobileImgBox.src = getOtherLanguageSrc(currentSrc);
 
@@ -29,7 +48,7 @@ function changeLanguageFromStorage() {
 }
 
 // Call the function on page load
-changeLanguageFromStorage();
+changeLanguage();
 
 dropDown.addEventListener("click", () => {
   list.classList.toggle("show-drop-down");
@@ -44,17 +63,23 @@ list.addEventListener("click", (e) => {
 
     if (newImg && newText) {
       // Update the current values
-      currentText = newText.innerHTML;
-      currentSrc = newImg.src;
+      currentText = newText.innerHTML.trim().toLowerCase().substring(0, 2);
+      currentSrc =
+        currentText === "ar" ? "./assits/ar-lng.svg" : "./assits/en-lng.svg";
 
-      // Save to local storage
-      localStorage.setItem("selectedText", currentText);
-      localStorage.setItem("selectedSrc", currentSrc);
+      // Navigate to the new URL
+      const newUrl =
+        window.location.origin +
+        "/" +
+        currentText +
+        window.location.pathname.substring(3);
 
-      selectedText.innerHTML = currentText;
+      // Use window.location.assign to navigate to the new URL
+      window.location.assign(newUrl);
+
+      // Set the values
+      selectedText.innerHTML = currentText.toUpperCase();
       selectedImg.src = currentSrc;
-
-      // Update the mobile image box
       mobileImgBox.src = getOtherLanguageSrc(currentSrc);
 
       // Update the styles based on the selected language
@@ -70,16 +95,12 @@ mobileImgBox.addEventListener("click", () => {
   // Toggle to the image of the other language
   currentSrc = getOtherLanguageSrc(currentSrc);
 
-  // Save to local storage
-  localStorage.setItem("selectedSrc", currentSrc);
-
   // Update the mobile image box
   mobileImgBox.src = getOtherLanguageSrc(currentSrc);
 
   // Update the dropdown values
-  currentText = currentText === "ENG" ? "AR" : "ENG";
-  localStorage.setItem("selectedText", currentText);
-  selectedText.innerHTML = currentText;
+  currentText = currentText === "en" ? "ar" : "en";
+  selectedText.innerHTML = currentText.toUpperCase();
   selectedImg.src = currentSrc;
 
   // Update the styles based on the selected language
@@ -91,6 +112,7 @@ function getOtherLanguageSrc(src) {
     ? "../assits/ar-lng.svg"
     : "../assits/en-lng.svg";
 }
+
 function setLanguageStyles() {
   const htmlElement = document.querySelector("html");
 
@@ -102,10 +124,7 @@ function setLanguageStyles() {
     stylesheet.parentNode.removeChild(stylesheet);
   });
 
-  // Load language from local storage
-  const currentText = localStorage.getItem("selectedText") || "ENG";
-
-  if (currentText === "AR") {
+  if (currentText === "ar") {
     // If the language is Arabic, add the RTL stylesheet with ID
     const head = document.head || document.getElementsByTagName("head")[0];
     head.insertAdjacentHTML(
@@ -114,7 +133,6 @@ function setLanguageStyles() {
     );
     htmlElement.setAttribute("dir", "rtl");
   } else {
-    // If the language is not Arabic, add the LTR stylesheet with ID (default for English)
     const head = document.head || document.getElementsByTagName("head")[0];
     head.insertAdjacentHTML(
       "beforeend",

@@ -4,22 +4,42 @@ document.addEventListener("DOMContentLoaded", function () {
   const selectedText = document.querySelector(".selected");
   const selectedImg = document.querySelector(".selected-img");
 
-  // Load from local storage or use default values
-  let currentText = localStorage.getItem("selectedText") || "ENG";
-  let currentSrc = localStorage.getItem("selectedSrc") || "./assits/en-lng.svg";
+  // Function to get language from the URL path
+  // Function to get language from the URL path
+  function getLanguageFromUrl() {
+    const pathSegments = window.location.pathname.split("/");
+    const languageSegment = pathSegments[1]; // Assuming language code is at position 1
+
+    if (
+      languageSegment &&
+      (languageSegment.toLowerCase() === "en" ||
+        languageSegment.toLowerCase() === "ar")
+    ) {
+      return languageSegment.toLowerCase(); // Return lowercase language code
+    } else {
+      // Default language if not specified in the URL
+      return "en";
+    }
+  }
+
+  // Set initial values based on URL or use default values
+  let currentText = getLanguageFromUrl();
+  let currentSrc =
+    currentText === "ar" ? "./assits/ar-lng.svg" : "./assits/en-lng.svg";
 
   // Set initial values
-  selectedText.innerHTML = currentText;
+  selectedText.innerHTML = currentText.toUpperCase(); // Display uppercase language code
   selectedImg.src = currentSrc;
 
-  // Function to change language based on the stored language in local storage
-  function changeLanguageFromStorage() {
-    // Load language from local storage
-    currentText = localStorage.getItem("selectedText") || "ENG";
-    currentSrc = localStorage.getItem("selectedSrc") || "./assits/en-lng.svg";
+  // Function to change language based on the language in the URL
+  function changeLanguage() {
+    // Get language from the URL
+    currentText = getLanguageFromUrl();
+    currentSrc =
+      currentText === "ar" ? "../assits/ar-lng.svg" : "../assits/en-lng.svg";
 
     // Set the values
-    selectedText.innerHTML = currentText;
+    selectedText.innerHTML = currentText.toUpperCase(); // Display uppercase language code
     selectedImg.src = currentSrc;
 
     // Update the styles based on the selected language
@@ -27,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Call the function on page load
-  changeLanguageFromStorage();
+  changeLanguage();
 
   dropDown.addEventListener("click", () => {
     list.classList.toggle("show-drop-down");
@@ -42,14 +62,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (newImg && newText) {
         // Update the current values
-        currentText = newText.innerHTML;
-        currentSrc = newImg.src;
+        currentText = newText.innerHTML.trim().toLowerCase().substring(0, 2);
+        currentSrc =
+          currentText === "ar"
+            ? "../assits/ar-lng.svg"
+            : "../assits/en-lng.svg";
 
-        // Save to local storage
-        localStorage.setItem("selectedText", currentText);
-        localStorage.setItem("selectedSrc", currentSrc);
+        // Navigate to the modified URL
+        console.log(currentText);
+        const newUrl =
+          window.location.origin +
+          "/" +
+          currentText +
+          window.location.pathname.substring(3);
+        window.location.href = newUrl;
 
-        selectedText.innerHTML = currentText;
+        selectedText.innerHTML = currentText.toUpperCase(); // Display uppercase language code
         selectedImg.src = currentSrc;
 
         // Update the styles based on the selected language
@@ -72,10 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
       stylesheet.parentNode.removeChild(stylesheet);
     });
 
-    // Load language from local storage
-    const currentText = localStorage.getItem("selectedText") || "ENG";
-
-    if (currentText === "AR") {
+    if (currentText === "ar") {
       // If the language is Arabic, add the RTL stylesheet with ID
       const head = document.head || document.getElementsByTagName("head")[0];
       head.insertAdjacentHTML(
@@ -84,7 +109,6 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       htmlElement.setAttribute("dir", "rtl");
     } else {
-      // If the language is not Arabic, add the LTR stylesheet with ID (default for English)
       const head = document.head || document.getElementsByTagName("head")[0];
       head.insertAdjacentHTML(
         "beforeend",
